@@ -1,0 +1,36 @@
+.section-directions-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+.directions {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    position: relative;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    margin-right: 0px;
+    height: 70px;
+    color: var(--bg-color);
+    background-color: rgba(47, 48, 58, 80%);
+    align-items: center;
+  }
+  &__img {
+    z-index: 1;
+    margin-top: 50px;
+  }
+}
+.dir {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}

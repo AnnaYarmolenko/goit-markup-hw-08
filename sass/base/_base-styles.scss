@@ -1,0 +1,44 @@
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--text-primery);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background: var(--bg-color);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.button {
+  padding: 0;
+  border: none;
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+}
+.icon-mail {
+  fill: currentColor;
+  margin-right: 10px;
+}

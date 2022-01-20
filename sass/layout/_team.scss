@@ -1,0 +1,89 @@
+.our-team-section {
+  background: var(--our-team-section-color);
+  max-width: 1600px;
+  padding: 60px 0px;
+  @media (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0px auto;
+  }
+}
+.our-team-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+
+  @media (min-width: 1200px) {
+    font-size: 36px;
+  }
+}
+.person {
+  // margin-top: 30px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
+  &__item {
+    // &:not(:last-child) {
+    //   margin-bottom: 30px;
+    // }
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media (min-width: 768px) {
+      flex-basis: calc((100%-2 * 30px) / 2);
+      // &:nth-child(2n + 1) {
+      //   margin-right: 30px;
+      // }
+
+      @media (min-width: 1140px) {
+        flex-basis: calc((100%-3 * 30px) / 3);
+        // &:not(:last-child) {
+        //   margin-right: 30px;
+      }
+      &:not(::last-child) {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__card {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    background-color: var(--bg-color);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__name {
+    margin-bottom: 10px;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  &__profession {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+}
+//   &__item {
+//     margin-right: 30px;
+
+//   }
+//   &__item:nth-child(4n) {
+//     margin-right: 0px;
+//   }

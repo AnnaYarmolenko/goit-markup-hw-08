@@ -1,0 +1,50 @@
+.logo {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--logo-color);
+
+  &__web {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__text {
+      margin-right: 88px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    &__text {
+      margin-right: 93px;
+    }
+    &__web {
+      font-size: 26px;
+    }
+  }
+}
+
+// .logo {
+//   font-family: Raleway;
+//   font-weight: bold;
+//   font-size: 26px;
+//   line-height: 1.2;
+//   color: var(--logo-color);
+
+//   &__text {
+//     margin-right: 93px;
+//   }
+//   &__web {
+//     font-family: Raleway;
+//     font-weight: bold;
+//     font-size: 26px;
+//     line-height: 1.2;
+//     color: var(--accent-color);
+//   }
+// }
