@@ -20,30 +20,56 @@
         <!--Главная строка навигации-->
         <div class="container navbar">
             <a class="logo logo__text" href="/"><span class="logo__web">Web</span>Studio</a>
-            <nav class="navbox">
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="menu-button__icon-cross" href="./img/icons.svg#icon-close40px"></use>
+                    <use class="menu-button__icon-menu" href="./img/icons.svg#icon-menu40px"></use>
+                </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>
+    
                 <ul class="site-nav">
                     <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студия</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="">Портфолио</a>
-                    </li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="">Портфолио</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
                 </ul>
-            </nav>
-            <ul class="contactbox">
-                <li>
-                    <a class="contactbox__link contactbox--accent" href="mailto:info@devstudio.com">
-                        <svg class="contactbox__icon" width="16" height="12">
-                            <use href='./img/icons.svg#icon-envelope'></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li>
-                    <a class="contactbox__link contactbox--accent" href="tel:+380961111111">
-                        <svg class="contactbox__icon" width="10" height="16">
-                            <use href='./img/icons.svg#icon-smartphone'></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+    
+    
+                <ul class="contactbox">
+                    <li>
+                        <a class="contactbox__link contactbox--accent" href="tel:+380961111111">
+                            <svg class="contactbox__icon contactbox__icon--phone" width="10" height="16">
+                                <use href='./img/icons.svg#icon-smartphone'></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
+                    <li>
+                        <a class="contactbox__link contactbox--accent" href="mailto:info@devstudio.com">
+                            <svg class="contactbox__icon contactbox__icon--mail" width="16" height="12">
+                                <use href='./img/icons.svg#icon-envelope'></use>
+                            </svg>
+                            info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="header-socialnetworks">
+                    <li class="header-socialnetworks__list">
+                        <a class="header-socialnetworks__link" href="">Instagram</a>
+                    </li>
+                    <li class="header-socialnetworks__list">
+                        <a class="header-socialnetworks__link" href="">Twitter</a>
+                    </li>
+                    <li class="header-socialnetworks__list">
+                        <a class="header-socialnetworks__link" href="">Fasebook</a>
+                    </li>
+                    <li class="header-socialnetworks__list">
+                        <a class="header-socialnetworks__link" href="">Linkedin</a>
+                    </li>
+                </ul>
+    
+    
+            </div>
+    
+    
         </div>
     </header>
     <main>
@@ -52,29 +78,39 @@
             <div class="container">
                 <!--Фильтр-->
                 <h1 class="projects-title">Наши проекты</h1>
-                <ul class="projects-button">
-                    <li class="projects-button__items">
-                        <button class="projects-button__btn" type="button">Все</button>
-                    </li>
-                    <li class="projects-button__items">
-                        <button class="projects-button__btn" type="button">Веб-сайты</button>
-                    </li>
-                    <li class="projects-button__items">
-                        <button class="projects-button__btn" type="button">Приложения</button>
-                    </li>
-                    <li class="projects-button__items">
-                        <button class="projects-button__btn" type="button">Дизайн</button>
-                    </li>
-                    <li class="projects-button__items">
-                        <button class="projects-button__btn" type="button">Маркетинг</button>
-                    </li>
-                </ul>
+                <div class="buttons">
+                    <ul class="projects-button">
+                        <li class="projects-button__items">
+                            <button class="projects-button__btn" type="button">Все</button>
+                        </li>
+                        <li class="projects-button__items">
+                            <button class="projects-button__btn" type="button">Веб-сайты</button>
+                        </li>
+                        <li class="projects-button__items">
+                            <button class="projects-button__btn" type="button">Приложения</button>
+                        </li>
+                        <li class="projects-button__items">
+                            <button class="projects-button__btn" type="button">Дизайн</button>
+                        </li>
+                        <li class="projects-button__items">
+                            <button class="projects-button__btn" type="button">Маркетинг</button>
+                        </li>
+                    </ul>
+                </div>
+                
                 <!--Проекты-->
                 <ul class="projects">
                     <li class="projects__item">
                         <a class="projects__link" href="#">
                             <div class="projects__overlay">
-                                <img src="./img/img.jpg" alt="img" width="370">
+                                <img srcset="
+                                    ./img/img-m@1x.jpg 450w,
+                                    ./img/img-m@2x.jpg 900w,
+                                    ./img/img-t@1x.jpg 354w,
+                                    ./img/img-t@2x.jpg 708w,
+                                    ./img/img-d@1x.jpg 370w,
+                                    ./img/img-d@2x.jpg 740w" src="./img/img-m@1x.jpg" alt="img" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового шпионажа и атак на защищенные сервера
@@ -90,7 +126,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img1.jpg" alt="img1" width="370">
+                                <img srcset="
+                                    ./img/img1-m@1x.jpg 450w,
+                                    ./img/img1-m@2x.jpg 900w,
+                                    ./img/img1-t@1x.jpg 354w,
+                                    ./img/img1-t@2x.jpg 708w,
+                                    ./img/img1-d@1x.jpg 370w,
+                                    ./img/img1-d@2x.jpg 740w" src="./img/img1-m@1x.jpg" alt="img1" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -106,7 +149,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img2.jpg" alt="img2" width="370">
+                                <img srcset="
+                                    ./img/img2-m@1x.jpg 450w,
+                                    ./img/img2-m@2x.jpg 900w,
+                                    ./img/img2-m@2x.jpg 354w,
+                                    ./img/img2-t@2x.jpg 708w,
+                                    ./img/img2-d@1x.jpg 370w,
+                                    ./img/img2-d@2x.jpg 740w" src="./img/img2-m@1x.jpg" alt="img2" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -122,7 +172,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img3.jpg" alt="img3" width="370">
+                                <img srcset="
+                                    ./img/img3-m@1x.jpg 450w,
+                                    ./img/img3-m@2x.jpg 900w,
+                                    ./img/img3-t@1x.jpg 354w,
+                                    ./img/img3-t@2x.jpg 708w,
+                                    ./img/img3-d@1x.jpg 370w,
+                                    ./img/img3-d@2x.jpg 740w" src="./img/img3-m@1x.jpg" alt="img3" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -138,7 +195,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img4.jpg" alt="img4" width="370">
+                                <img srcset="
+                                    ./img/img4-m@1x.jpg 450w,
+                                    ./img/img4-m@2x.jpg 900w,
+                                    ./img/img4-t@1x.jpg 354w,
+                                    ./img/img4-t@2x.jpg 708w,
+                                    ./img/img4-d@1x.jpg 370w,
+                                    ./img/img4-d@2x.jpg 740w" src="./img/img4-m@1x.jpg" alt="img4" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -154,7 +218,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img5.jpg" alt="img5" width="370">
+                                <img srcset="
+                                    ./img/img5-m@1x.jpg 450w,
+                                    ./img/img5-m@2x.jpg 900w,
+                                    ./img/img5-t@1x.jpg 354w,
+                                    ./img/img5-t@2x.jpg 708w,
+                                    ./img/img5-d@1x.jpg 370w,
+                                    ./img/img5-d@2x.jpg 740w" src="./img/img5-m@1x.jpg" alt="img5" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -170,7 +241,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img6.jpg" alt="img6" width="370">
+                                <img srcset="
+                                    ./img/img6-m@1x.jpg 450w,
+                                    ./img/img6-m@2x.jpg 900w,
+                                    ./img/img6-t@1x.jpg 354w,
+                                    ./img/img6-t@2x.jpg 708w,
+                                    ./img/img6-d@1x.jpg 370w,
+                                    ./img/img6-d@2x.jpg 740w" src="./img/img6-m@1x.jpg" alt="img6" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -186,7 +264,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img7.jpg" alt="img7" width="370">
+                                <img srcset="
+                                    ./img/img7-m@1x.jpg 450w,
+                                    ./img/img7-m@2x.jpg 900w,
+                                    ./img/img7-t@1x.jpg 354w,
+                                    ./img/img7-t@2x.jpg 708w,
+                                    ./img/img7-d@1x.jpg 370w,
+                                    ./img/img7-d@2x.jpg 740w" src="./img/img7-m@1x.jpg" alt="img7" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
@@ -202,7 +287,14 @@
                     <li class="projects__item">
                         <a class="projects__link" href="">
                             <div class="projects__overlay">
-                                <img src="./img/img8.jpg" alt="img8" width="370">
+                                <img srcset="
+                                    ./img/img8-m@1x.jpg 450w,
+                                    ./img/img8-m@2x.jpg 900w,
+                                    ./img/img8-t@1x.jpg 354w,
+                                    ./img/img8-t@2x.jpg 708w,
+                                    ./img/img8-d@1x.jpg 370w,
+                                    ./img/img8-d@2x.jpg 740w" src="./img/img8-m@1x.jpg" alt="img8" sizes="(min-width: 1200px) 33vw, 
+                                    (min-width: 768px) 50vw, (min-width: 480px) 100vw" />
                                 <div class="projects__description">
                                     <p>Технокряк это современная площадка распространения коронавируса. Компании
                                         используют эту платформу для цифрового
