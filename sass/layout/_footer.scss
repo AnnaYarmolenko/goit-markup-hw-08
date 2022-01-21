@@ -7,10 +7,11 @@
   color: var(--bg-color);
 }
 .address {
-  &--text {
+  &__text {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     margin-top: 20px;
+    margin-bottom: 60px;
   }
 }
 .address {
@@ -29,12 +30,12 @@
     color: var(--bg-color);
   }
 }
+
 .footer-social-title {
   font-family: Roboto;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.17;
-  margin-top: 60px;
   margin-bottom: 20px;
   color: var(--bg-color);
 }
@@ -51,6 +52,9 @@
       margin-bottom: 8px;
     }
   }
+}
+.social-list--mrgn {
+  margin-bottom: 60px;
 }
 .submit {
   &__input {
@@ -116,6 +120,12 @@
   .footer {
     display: flex;
     align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo-address {
+    display: flex;
+    align-items: baseline;
   }
   .footer-social {
     margin-left: 70px;
@@ -125,6 +135,11 @@
   }
   .submit {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+
+    &__input {
+      width: 358px;
+      margin-right: 12px;
+    }
   }
 }

@@ -28,6 +28,11 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 .modal-button {
   display: flex;
@@ -60,7 +65,7 @@
   display: flex;
   text-align: center;
   font-size: 20px;
-  line-height: 1.17;
+  line-height: 1.5;
 }
 .modal-form {
   margin-top: 12px;

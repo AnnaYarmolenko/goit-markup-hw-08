@@ -127,7 +127,7 @@
         
         <!--Наши преимущества-->     
         <section class="section adv">
-            <div class="container advant">
+            <div class="container">
                 <h2 class="section-title">Наши преимущества</h2>
                 <ul class="advantage">
                     <li class="advantage__item">
@@ -176,15 +176,21 @@
                 <h2 class="section-directions-title">Чем мы занимаемся</h2>
                 <ul class="directions">
                     <li class="directions__item">
-                        <img class="directions__img" src="./img/box1.jpg" alt="box1" width="370">
+                        <img srcset="
+                            ./img/box1-d@1x.jpg 370w,
+                            ./img/box1-d@2x.jpg 740w" src="./img/box1-d@1x.jpg" alt="box1" sizes="(min-width: 1200px) 33vw" />
                         <p class="directions__text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
                     </li>
                     <li class="directions__item">
-                        <img class="directions__img" src="./img/box2.jpg" alt="box2" width="370">
+                        <img srcset="
+                            ./img/box2-d@1x.jpg 370w,
+                            ./img/box2-d@2x.jpg 740w" src="./img/box2-d@1x.jpg" alt="box2" sizes="(min-width: 1200px) 33vw" />
                         <p class="directions__text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
                     </li>
                     <li class="directions__item">
-                        <img class="directions__img" src="./img/box3.jpg" alt="box3" width="370">
+                        <img srcset="
+                            ./img/box3-d@1x.jpg 370w,
+                            ./img/box3-d@2x.jpg 740w" src="./img/box3-d@1x.jpg" alt="box3" sizes="(min-width: 1200px) 33vw" />
                         <p class="directions__text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
                     </li>
                 </ul>
@@ -435,7 +441,7 @@
             <div class="logo-address">
                 <div class="logo">
                     <a class="logo__text logo__text--footer" href="/"><span class="logo__web">Web</span>Studio</a>
-                    <address class="address--text">
+                    <address class="address__text">
                         <ul>
                             <li class="address__item"><a class="address__link" href="">г. Киев, пр-т Леси Украинки, 26</a></li>
                             <li class="address__item"><a class="address__link" href="mailto:info@example.com">info@example.com</a></li>
@@ -445,7 +451,7 @@
                 </div>
                 <div class="footer-social">
                     <h3 class="footer-social-title">ПРИСОЕДИНЯЙТЕСЬ</h3>
-                    <ul class="social-list">
+                    <ul class="social-list social-list--mrgn">
                         <li class="social-list__item">
                             <a href="#" class="social-list__link social-list__link--bgr" aria-label="instagram">
                                 <svg class="social-list__icon" width="20">
