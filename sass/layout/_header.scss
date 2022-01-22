@@ -153,9 +153,6 @@
   &__link {
     display: flex;
     align-items: center;
-    &.contactbox--accent {
-      margin-right: 30px;
-    }
   }
   &__icon--phone {
     font-size: 34px;
@@ -170,11 +167,13 @@
     margin-bottom: 64px;
   }
 }
-.contactbox li:last-child {
-  margin-bottom: 32px;
-}
-.contactbox li {
-  margin-bottom: 64px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .contactbox li:last-child {
+    margin-bottom: 32px;
+  }
+  .contactbox li {
+    margin-bottom: 64px;
+  }
 }
 
 /*----- Menu socialnetworks -----*/
@@ -272,9 +271,6 @@
     &__link {
       display: flex;
       align-items: center;
-      &.contactbox--accent {
-        margin-right: 30px;
-      }
     }
 
     &__icon {
@@ -314,5 +310,8 @@
     &__item:not(:last-child) {
       margin-right: 50px;
     }
+  }
+  .contactbox__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
