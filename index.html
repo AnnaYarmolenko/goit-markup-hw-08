@@ -17,8 +17,7 @@
         <!--Главная строка навигации-->
         <div class="container navbar">
                 <a class="logo logo__text" href="/"><span class="logo__web">Web</span>Studio</a>
-                <button type="button" class="menu-button"
-                aria-expanded="false"
+                <button type="button" class="menu-button" aria-expanded="false"
                 aria-controls="menu-container"
                 data-menu-button>
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
@@ -27,15 +26,20 @@
                     </svg>
                 </button>
                 <div class="menu-container" id="menu-container" data-menu>
-                   
+                   <div class="nav-contactbox">
                         <ul class="site-nav">
                             <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="">Студия</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
                         </ul>
-                  
-                
                         <ul class="contactbox">
+                            <li>
+                                <a class="contactbox__link contactbox--accent" href="mailto:info@devstudio.com">
+                                    <svg class="contactbox__icon" width="16" height="12">
+                                        <use href='./img/icons.svg#icon-envelope'></use>
+                                    </svg>
+                                    info@devstudio.com</a>
+                            </li>
                             <li>
                                 <a class="contactbox__link contactbox--accent" href="tel:+380961111111">
                                     <svg class="contactbox__icon contactbox__phone" width="10" height="16">
@@ -43,14 +47,8 @@
                                     </svg>
                                     +38 096 111 11 11</a>
                             </li>
-                            <li>
-                                    <a class="contactbox__link contactbox--accent" href="mailto:info@devstudio.com">
-                                        <svg class="contactbox__icon" width="16" height="12">
-                                            <use href='./img/icons.svg#icon-envelope'></use>
-                                        </svg>
-                                        info@devstudio.com</a>
-                            </li>
                         </ul>
+                    </div>
                         <ul class="header-socialnetworks">
                             <li class="header-socialnetworks__list">
                                 <a class="header-socialnetworks__link" href="">Instagram</a>
@@ -65,8 +63,6 @@
                                 <a class="header-socialnetworks__link" href="">Linkedin</a>
                             </li>
                         </ul>
-                 
-                   
                 </div>
             
 

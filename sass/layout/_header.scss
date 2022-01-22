@@ -9,6 +9,10 @@
   justify-content: space-between;
   min-height: 60px;
   margin-left: 0;
+
+  @media screen and (min-width: 768px) {
+    min-height: 80px;
+  }
 }
 .menu-button {
   display: inline-flex;
@@ -33,13 +37,12 @@
   fill: var(--accent-color);
   cursor: pointer;
 }
-.navigation,
-.contacts {
-  @media (max-width: 767px) {
-    display: none;
-  }
+.menu-button.is-open {
+  display: block;
+  position: fixed;
+  right: 15px;
+  top: 10px;
 }
-
 .menu-button .menu-button__icon-cross {
   display: none;
 }
@@ -47,9 +50,6 @@
   display: block;
 }
 .menu-button.is-open .menu-button__icon-menu {
-  display: none;
-}
-.menu-button__icon-cross {
   display: none;
 }
 
@@ -92,23 +92,19 @@
     margin-bottom: 302px;
   }
 }
+
 @media screen and (max-width: 767px) {
-  // .contactbox {
-  //   display: none;
-  //   display: flex;
-  //   flex-direction: column;
-  //   flex-direction: column-reverse;
+  .contactbox {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
 
   .contactbox__link:last-child {
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
-  }
-  .contactbox__link:nth-child(2) {
-    margin-bottom: 32px;
-  }
-  .contactbox__item:nth-child(1) {
-    margin-bottom: 64px;
   }
   .contactbox__icon {
     display: none;
@@ -174,13 +170,11 @@
     margin-bottom: 64px;
   }
 }
-.contactbox li {
+.contactbox li:last-child {
   margin-bottom: 32px;
 }
-.contactbox li:last-child {
-  margin-bottom: 64px;
-}
-/* Menu socialnetworks */
+
+/*----- Menu socialnetworks -----*/
 @media screen and (min-width: 768px) {
   .header-socialnetworks {
     display: none;
@@ -188,10 +182,7 @@
 }
 @media screen and (max-width: 767px) {
   .header-socialnetworks {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: -10px;
   }
@@ -212,20 +203,10 @@
     margin-left: 10px;
   }
 }
+// ----- Хедер для таблетки -----
 
+// ----- Хедер для десктопа -----
 @media screen and (min-width: 1200px) {
-  .icon-cross svg {
-    width: 18.67px;
-    height: 18.67px;
-  }
-  .icon-menu svg {
-    width: 24px;
-    height: 16px;
-  }
-  .header {
-    background: var(--bg-color);
-    border-bottom: 1px solid var(--navbar-border);
-  }
   .navbar {
     max-width: 1600px;
     padding-left: 15px;
@@ -234,16 +215,27 @@
     align-items: center;
     height: 80px;
   }
-  .navigation {
+  .nav-contactbox {
     display: flex;
+    align-items: center;
+  }
+  .menu-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 238px;
   }
   .site-nav {
     display: flex;
+    margin-right: 305px;
 
     &__item:not(:last-child) {
       margin-right: 50px;
     }
+
     /* -----Нижнее активное подчеркивание----- */
+
     &__item {
       position: relative;
     }
@@ -269,7 +261,6 @@
   }
   .contactbox {
     display: flex;
-    margin-left: auto;
 
     &__link {
       font-weight: 500;
