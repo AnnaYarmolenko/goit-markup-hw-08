@@ -551,6 +551,7 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -1280,7 +1281,7 @@ body {
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1199px) and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 1199px) and (max-width: 767px) {
   .clients__item {
     max-width: calc((100% - 30px) / 2);
     width: 100%;

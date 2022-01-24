@@ -52,7 +52,7 @@
   }
 
   .clients__item {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
       max-width: calc((100% - 30px) / 2);
       width: 100%;
       &:nth-child(2n + 1) {
