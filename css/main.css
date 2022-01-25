@@ -420,7 +420,6 @@ img {
   }
 
   .menu-container {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -539,6 +538,8 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   background: var(--bg-color);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
@@ -591,22 +592,15 @@ body {
 
 .hero-section {
   max-width: 1600px;
-  height: 400px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
-  height: 400px;
   padding: 118px 0 118px 0;
   margin: 0px auto;
-}
-@media screen and (min-width: 768px) {
-  .hero-section {
-    height: 400px;
-    padding: 118px 0 118px 0;
-  }
 }
 @media screen and (min-width: 1200px) {
   .hero-section {
@@ -669,7 +663,6 @@ body {
 
 @media screen and (max-width: 767px) {
   .hero-section {
-    height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/imghero-m@1x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/imghero-m@1x.jpg);
   }
@@ -1352,6 +1345,7 @@ body {
   }
 }
 .footer-section {
+  max-width: 1600px;
   background: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1394,6 +1388,7 @@ body {
 
 .social-list__link--bgr {
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--bg-color);
 }
 
 @media screen and (max-width: 767px) {
