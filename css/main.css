@@ -544,6 +544,7 @@ body {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -557,6 +558,7 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -1510,17 +1512,6 @@ body {
   display: none;
 }
 
-.buttons {
-  width: 100%;
-}
-@media screen and (max-width: 767px) {
-  .buttons {
-    width: 362px;
-    height: 91px;
-    margin: 0px 103px 40px 15px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .projects-button {
     display: -webkit-box;
@@ -1543,14 +1534,7 @@ body {
 }
 .projects-button__items {
   margin-right: 8px;
-}
-@media screen and (max-width: 767px) {
-  .projects-button__items:nth-child(-n+3) {
-    margin-bottom: 15px;
-  }
-  .projects-button__items:nth-child(3) {
-    margin-right: 0px;
-  }
+  margin-bottom: 15px;
 }
 .projects-button__btn {
   padding: 6px 22px;
